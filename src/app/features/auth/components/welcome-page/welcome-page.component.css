@@ -1,0 +1,24 @@
+.page {
+    padding: 20;
+}
+.h1 {
+    font-size: 30px;
+    margin: 30;
+}
+
+.btn {
+    margin-bottom: 15;
+    padding: 15 20;
+    font-size: 18;
+    color: var(--text-color-light);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}

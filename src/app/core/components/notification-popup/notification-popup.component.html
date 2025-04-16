@@ -1,0 +1,5 @@
+<StackLayout class="notification-popup" >
+    <ng-container *ngFor="let notification of notifications">
+        <Label [text]="notification.message" class="message" (tap)="onOverlayDummyTouch()"></Label>
+    </ng-container>
+</StackLayout>

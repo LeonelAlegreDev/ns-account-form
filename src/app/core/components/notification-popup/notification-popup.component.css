@@ -1,0 +1,11 @@
+.notification-popup {
+    width: 100%;
+    height: auto;
+    color: rgb(0, 0, 0);
+}
+.message {
+    margin-bottom: 5px;
+    height: 200px;
+    font-size: 16;
+    background-color: rgb(72, 255, 154);
+}

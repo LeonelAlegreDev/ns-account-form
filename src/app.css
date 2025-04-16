@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ns-root {
+    --primary-color: #f8cf84;
+    --accent-color: #f2ae1c;
+    --secondary-color: #4c7031;
+    --light-color: #faddaf;
+    --dark-color: #ecc165;
+    --text-color-light: #fceccd;
+    --text-color-dark: #000000;
+}
+.ns-image{
+    background-color: #717171;
+}
