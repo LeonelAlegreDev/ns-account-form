@@ -1,5 +1,10 @@
 <StackLayout class="notification-popup" >
-    <ng-container *ngFor="let notification of notifications">
-        <Label [text]="notification.message" class="message" (tap)="onOverlayDummyTouch()"></Label>
-    </ng-container>
+    <StackLayout (tap)="onOverlayDummyTouch()" class="notification" *ngFor="let notification of notifications">
+        <Label  class="message"
+                [text]="notification.message"
+                borderColor="#063215" borderWidth="1">
+        
+                
+        </Label>
+    </StackLayout>
 </StackLayout>

@@ -3,9 +3,13 @@
     height: auto;
     color: rgb(0, 0, 0);
 }
+.notification{
+    padding-top: 20px;
+}
 .message {
-    margin-bottom: 5px;
-    height: 200px;
-    font-size: 16;
-    background-color: rgb(72, 255, 154);
+    width: 100%;
+    padding: 20px 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: var(--light-color);
 }
