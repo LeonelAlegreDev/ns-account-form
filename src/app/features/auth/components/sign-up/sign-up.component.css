@@ -20,10 +20,6 @@
     border-radius: 15px;
     background-color: var(--text-color-light);
 }
-
-.btn{
-    width: 100%;
-}
 .redirect{
     color: var(--complementary-color-dark);
     font-size: 14px;

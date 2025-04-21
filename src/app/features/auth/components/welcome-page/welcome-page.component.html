@@ -1,8 +1,6 @@
-<GridLayout class="page">
-  <!-- CONTENT -->
+<!-- <GridLayout class="page">
   <GridLayout class="content">
     <StackLayout>
-      <!-- PAGE CONTENT -->
       <Image class="ns-image" height="200" width="200" src="~/assets/icons/icon.png"></Image>
 
       <Label text="¡Bienvenido!" class="h1 text-center"></Label>
@@ -13,4 +11,19 @@
   </GridLayout>
 
   <AbsoluteLayout #notificationPopup class="notifications"></AbsoluteLayout>
-</GridLayout>
+</GridLayout> -->
+
+  <!-- CONTENT -->
+  <FlexboxLayout class="page">
+    <StackLayout>
+      <!-- PAGE CONTENT -->
+      <Image class="ns-image" height="200" width="200" src="~/assets/icons/icon.png"></Image>
+
+      <Label text="¡Bienvenido!" class="title text-center"></Label>
+
+      <Button text="Crear Cuenta" class="btn btn-primary" (tap)="onCreateAccountTap()"></Button>
+      <Button text="Iniciar Sesión" class="btn btn-secondary" (tap)="onLoginTap()"></Button>
+    </StackLayout>
+  </FlexboxLayout>
+
+  <AbsoluteLayout #notificationPopup class="notifications"></AbsoluteLayout>

@@ -35,5 +35,6 @@ export class WelcomePageComponent implements OnInit {
 
     public onLoginTap(): void {
         console.log('Iniciar Sesión presionado');
+        // push notification
     }
 }
