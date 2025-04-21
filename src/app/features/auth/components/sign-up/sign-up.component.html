@@ -1,0 +1,33 @@
+<FlexboxLayout class="page">
+    <Image class="ns-image" height="200" width="200" src="~/assets/icons/icon.png"></Image>
+    <!-- EMAIL -->
+    <StackLayout class="input-field">
+        <Label class="label" text="Ingresá tu email"></Label>
+        <TextField  class="input"
+                    hint="Email" 
+                    keyboardType="email" 
+                    autocorrect="false" 
+                    autocapitalizationType="none">
+        </TextField>
+    </StackLayout>
+
+    <!-- PASSWORD -->
+    <StackLayout class="input-field">
+        <Label class="label" text="Creá una contraseña"></Label>
+        <TextField  class="input"
+                    hint="Contraseña" 
+                    autocorrect="false" 
+                    autocapitalizationType="none"
+                    secure="true">
+        </TextField>
+    </StackLayout>
+    
+    <StackLayout class="input-field">
+        <Button text="Crear cuenta" class="btn btn-primary"></Button>
+    </StackLayout>
+  
+    <StackLayout class="input-field">
+        <Label class="redirect" text="¿No tenes una cuenta?"></Label>
+        <Label class="redirect" text="¡Crea una cuenta ahora!"></Label>
+    </StackLayout>
+</FlexboxLayout>

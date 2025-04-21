@@ -6,11 +6,34 @@
     --primary-color: #f8cf84;
     --accent-color: #f2ae1c;
     --secondary-color: #4c7031;
-    --light-color: #faddaf;
+    --light-color: #f3dfbf;
     --dark-color: #ecc165;
+    --complementary-color: #84ADF8;
+    --complementary-color-light: #c3d5f6;
+    --complementary-color-dark: #3e4e6c;
     --text-color-light: #fceccd;
     --text-color-dark: #063215;
 }
 .ns-image{
     background-color: #717171;
+}
+.page{
+    padding: 20px 25px;
+    background-color: var(--light-color);
+}
+.btn {
+    margin-bottom: 15;
+    padding: 15 20;
+    font-size: 18;
+    border-radius: 15px;
+    color: var(--text-color-light);
+}
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
 }
