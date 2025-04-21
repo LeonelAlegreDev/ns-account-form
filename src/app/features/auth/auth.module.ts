@@ -8,6 +8,8 @@ import { WelcomePageComponent } from './components/welcome-page/welcome-page.com
   imports: [
     NativeScriptCommonModule,
     AuthRoutingModule,
+  ],
+  declarations: [
     WelcomePageComponent,
   ],
   schemas: [NO_ERRORS_SCHEMA],

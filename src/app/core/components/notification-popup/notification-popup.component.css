@@ -5,11 +5,14 @@
 }
 .notification{
     padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.201);
 }
 .message {
-    width: 100%;
-    padding: 20px 15px;
-    font-size: 14px;
+    padding: 10px 20px;
+    font-size: 15px;
     border-radius: 10px;
     background-color: var(--light-color);
+}
+.ui-icon{
+    background-color: red;
 }

@@ -9,10 +9,11 @@ import { NotificationPopupComponent } from '~/app/core/components/notification-p
     selector: 'ns-welcome-page',
     templateUrl: './welcome-page.component.html',
     styleUrls: ['./welcome-page.component.css'],
-    schemas: [NO_ERRORS_SCHEMA],
-    imports: [
-        NativeScriptCommonModule,
-    ],
+    // schemas: [NO_ERRORS_SCHEMA],
+    // imports: [
+    //     NativeScriptCommonModule,
+    // ],
+    standalone: false,
 })
 export class WelcomePageComponent implements OnInit {
     @ViewChild('notificationPopup', { read: ViewContainerRef }) notificationPopupRef: ViewContainerRef;

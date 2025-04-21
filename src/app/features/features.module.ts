@@ -5,7 +5,8 @@ import { NativeScriptCommonModule } from '@nativescript/angular';
 @NgModule({
   imports: [
     NativeScriptModule,
-    NativeScriptCommonModule
+    NativeScriptCommonModule,
+
   ],
   declarations: [],
   exports: []
