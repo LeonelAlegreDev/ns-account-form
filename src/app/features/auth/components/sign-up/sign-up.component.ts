@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Page } from '@nativescript/core';
 
 @Component({
@@ -8,11 +8,21 @@ import { Page } from '@nativescript/core';
     standalone: false,
 })
 export class SignUpComponent {
+    // private supabaseService = inject(SupabaseService);
+
+
     constructor(private page: Page) {
         this.page.actionBarHidden = true; // Ocultar la barra de acción
     }
 
-    ngOnInit(): void {
+    signUp() {
+        console.log("Creando cuenta");
 
+        const credenciales = {
+            email: 'usuario1@email.com',
+            username: 'usuario 1',
+            password: '111111',
+        }
+        console.log(credenciales);
     }
 }
