@@ -22,17 +22,14 @@ export class NotificationPopupComponent implements OnInit {
   }
 
   public pushNotification(notification: Notification): void {
-    console.log('Pushed notification: \n', notification);
     this.notifications.push(notification);
   }
 
   // PREVENT INTERACTION WITH THE BACK LAYER
   public onOverlayDummyTouch(): void {
-    console.log('Overlay Dummy Touch');
   }
 
   public closeNotification(notification: Notification): void {
-    console.log('Closed notification: \n', notification);
     const index = this.notifications.indexOf(notification);
     if (index !== -1) {
       this.notifications.splice(index, 1);

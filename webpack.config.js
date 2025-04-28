@@ -26,6 +26,8 @@ module.exports = (env) => {
 				"tls": false, // No es compatible con NativeScript
 				"utf-8-validate": false,
 				"bufferutil": false,
+				"http2": false, // Add fallback for http2
+				"dns": false, // Add fallback for dns
 			},
 		});
 
@@ -52,7 +54,7 @@ module.exports = (env) => {
 		});
 	});
 
-	// Add NodePolyfillPlugin and DefinePlugin
+	// Add NodePolyfillPlugin, DefinePlugin, and ProvidePlugin
 	webpack.merge({
 		plugins: [
 			new NodePolyfillPlugin(),

@@ -9,6 +9,7 @@ import { Page } from '@nativescript/core';
 })
 export class SignUpComponent {
     // private supabaseService = inject(SupabaseService);
+    public email = '';
 
 
     constructor(private page: Page) {

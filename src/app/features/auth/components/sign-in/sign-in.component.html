@@ -7,8 +7,9 @@
                     hint="Email" 
                     keyboardType="email" 
                     autocorrect="false" 
-                    autocapitalizationType="none">
-        </TextField>
+                    autocapitalizationType="none"
+                    [(ngModel)]="email"
+                    [formControl]="emailControl"/>
     </StackLayout>
 
     <!-- PASSWORD -->
@@ -18,12 +19,15 @@
                     hint="Contraseña" 
                     autocorrect="false" 
                     autocapitalizationType="none"
-                    secure="true">
+                    secure="true"
+                    [(ngModel)]="password">
         </TextField>
     </StackLayout>
     
     <StackLayout class="input-field">
-        <Button text="Iniciar sesión" class="btn btn-secondary"></Button>
+        <Button text="Iniciar sesión"
+                class="btn btn-secondary"
+                (tap)="signIn()"></Button>
     </StackLayout>
   
     <StackLayout class="input-field">
@@ -31,3 +35,5 @@
         <Label class="redirect" text="¡Crea una cuenta ahora!"></Label>
     </StackLayout>
 </FlexboxLayout>
+
+<AbsoluteLayout #notificationPopup class="notifications"></AbsoluteLayout>

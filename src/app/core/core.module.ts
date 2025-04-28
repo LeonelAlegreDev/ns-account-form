@@ -4,6 +4,6 @@ import { NativeScriptModule } from '@nativescript/angular';
 @NgModule({
   imports: [NativeScriptModule],
   declarations: [],
-  exports: []
+  exports: [],
 })
 export class CoreModule { }

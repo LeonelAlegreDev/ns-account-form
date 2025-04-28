@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "959729160657",
+    "project_id": "recu-p-1",
+    "storage_bucket": "recu-p-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959729160657:android:ff0ac4a0b9548b7e24d0f0",
+        "android_client_info": {
+          "package_name": "practica.profesional.utn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuNZnNZkm_etojk8SGWsGXu1V60pf4Pjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

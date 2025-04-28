@@ -8,18 +8,18 @@
     "@angular/common": "~19.0.0",
     "@angular/compiler": "~19.0.0",
     "@angular/core": "~19.0.0",
-    "@angular/fire": "^19.1.0",
     "@angular/forms": "~19.0.0",
     "@angular/platform-browser": "~19.0.0",
     "@angular/platform-browser-dynamic": "~19.0.0",
     "@angular/router": "~19.0.0",
     "@nativescript/angular": "^19.0.0",
     "@nativescript/core": "~8.9.0",
+    "@nativescript/firebase": "^11.1.3",
     "browserify": "^17.0.1",
     "dotenv": "^16.5.0",
-    "firebase": "^11.6.1",
     "nativescript": "^8.9.2",
     "nativescript-fonticon": "^8.1.3",
+    "process": "^0.11.10",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },
@@ -53,5 +53,8 @@
   },
   "scripts": {
     "postinstall": "patch-package"
+  },
+  "nativescript": {
+    "id": "practica.profesional.utn"
   }
 }
