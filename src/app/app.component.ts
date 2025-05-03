@@ -1,7 +1,6 @@
 import { Component, NO_ERRORS_SCHEMA, ViewContainerRef, ViewChild } from '@angular/core';
 import { NativeScriptCommonModule, PageRouterOutlet } from '@nativescript/angular';
-import { firebase } from '@nativescript/firebase';
-import { CoreModule } from './core/core.module';
+import { firebase } from '@nativescript/firebase-core';
 
 @Component({
   selector: 'ns-app',
@@ -20,17 +19,13 @@ export class AppComponent {
   constructor() {
   }
   
-  ngOnInit() {
-    firebase.init({
-      // Optionally pass in properties for database, authentication and cloud messaging,
-      // see their respective docs.
-    }).then(
-      () => {
-        console.log("firebase.init done");
-      },
-      error => {
-        console.log(`firebase.init error: ${error}`);
-      }
-    );
+  async ngOnInit() {
+    const firebaseApp = await firebase().initializeApp().then((app) => {
+      console.log("Firebase initialized successfully");
+      return app;
+    }, (error) => {
+      console.error("Error initializing Firebase:", error);
+      return null;
+    });
   }
 }

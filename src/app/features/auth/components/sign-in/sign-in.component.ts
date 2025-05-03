@@ -3,7 +3,7 @@ import { Page } from '@nativescript/core';
 import { FormControl, Validators } from '@angular/forms';
 import { NotificationPopupComponent } from '~/app/core/components/notification-popup/notification-popup.component';
 import { Notification } from '~/app/core/models/Notification';
-
+import { UserService } from '~/app/core/services/user.service';
 
 @Component({
     selector: 'ns-sign-in',
@@ -12,9 +12,7 @@ import { Notification } from '~/app/core/models/Notification';
     standalone: false,
 })
 export class SignInComponent {
-    // Importar el servicio de autenticación
-    // ERROR AL INYECTAR EL SERVICIO
-    // private fireAuthService = inject(FireAuthService);
+    private userService = inject(UserService);
 
     // Sistema de notificaciones
     @ViewChild('notificationPopup', { read: ViewContainerRef }) notificationPopupRef: ViewContainerRef;
@@ -52,13 +50,17 @@ export class SignInComponent {
         }
 
         try{
-            // Llamar al servicio de autenticación
-            // const userCredential = await this.fireAuthService.Login(this.email, this.password);
-            // console.log('Usuario autenticado:', userCredential.user);
-            
-            // Aquí puedes redirigir al usuario a otra página o mostrar un mensaje de éxito
+            const notification: Notification = {
+                message: 'Autenticando usuario: ' + this.email,
+            }
+            // TODO: getUsers throw error
+            // this.userService.getUsers();
         }
         catch (error) {
+            // Manejo de errores
+            const notification: Notification = {
+                message: 'Error al autenticar el usuario: ' + error,
+            };
             console.log('Error al iniciar sesión:', error);
         }
 
