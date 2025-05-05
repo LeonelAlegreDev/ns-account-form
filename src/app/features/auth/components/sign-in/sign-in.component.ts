@@ -23,6 +23,8 @@ export class SignInComponent {
     // Validaciones de los campos
     public emailControl = new FormControl('', [Validators.required, Validators.email]);
     public passwordControl = new FormControl('', [Validators.required, Validators.minLength(6)]);
+    // Estado del modal
+    public isModalVisible = false;
 
     constructor(private page: Page) {
         this.page.actionBarHidden = true; // Ocultar la barra de acción
@@ -53,6 +55,7 @@ export class SignInComponent {
             const notification: Notification = {
                 message: 'Autenticando usuario: ' + this.email,
             }
+            this.notificationPopupCR.instance.pushNotification(notification);
             // TODO: getUsers throw error
             // this.userService.getUsers();
         }
@@ -65,4 +68,37 @@ export class SignInComponent {
         }
 
     }
+
+    switchModalState() {
+        this.isModalVisible = !this.isModalVisible;
+    }
+
+    useDemoAccount(type: string) {
+        switch (type) {
+            case 'usuario':
+                this.email = "usuario@usuario.com";
+                this.password = "333333";
+                break;
+            case 'admin':
+                this.email = "admin@admin.com";
+                this.password = "111111";
+                break;
+            case 'invitado':
+                this.email = "invitado@invitado.com";
+                this.password = "222222";
+                break;
+            case 'anonimo':
+                this.email = "anonimo@anonimo.com"
+                this.password = "444444";
+                break;
+            case 'tester':
+                this.email = "tester@tester.com"
+                this.password = "555555";
+                break;
+        }
+        this.isModalVisible = false;
+    }
+
+    // Previene la interaccion con el fondo
+    dummyTouch(){}
 }
